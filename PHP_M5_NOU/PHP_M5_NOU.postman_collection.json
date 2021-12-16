@@ -1,0 +1,569 @@
+{
+	"info": {
+		"_postman_id": "ec7edce2-7667-4d91-9771-a9d0d3027543",
+		"name": "PHP_M5_NOU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Teams",
+			"item": [
+				{
+					"name": "Teams List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ip}}:{{port}}/teams",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Teams Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ip}}:{{port}}/teams/show/1",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"teams",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Teams Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Team Five",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Fifth City",
+									"type": "text"
+								},
+								{
+									"key": "stadium",
+									"value": "Fifth Center",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "White",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ip}}:{{port}}/teams/create",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"teams",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Teams Edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Team Five",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Fifth City",
+									"type": "text"
+								},
+								{
+									"key": "stadium",
+									"value": "Fifth Center",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "White",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ip}}:{{port}}/teams/edit/5",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"teams",
+								"edit",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Teams Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{ip}}:{{port}}/teams/delete/7",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"teams",
+								"delete",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Encounters",
+			"item": [
+				{
+					"name": "Encounters List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ip}}:{{port}}/encounters",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"encounters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Encounters Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ip}}:{{port}}/encounters/show/2",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"encounters",
+								"show",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Encounters Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "team_1",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "team_2",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "when",
+									"value": "2022-01-01 00:01:00",
+									"type": "text"
+								},
+								{
+									"key": "where",
+									"value": "Fourth Center",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ip}}:{{port}}/encounters/create",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"encounters",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Encounters Edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "team_1_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "team_2_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "when",
+									"value": "2021-12-31 17:00:00",
+									"type": "text"
+								},
+								{
+									"key": "where",
+									"value": "First Center",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ip}}:{{port}}/encounters/edit/3",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"encounters",
+								"edit",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Encounters Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{ip}}:{{port}}/encounters/delete/7",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"encounters",
+								"delete",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Players",
+			"item": [
+				{
+					"name": "Players List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ip}}:{{port}}/players",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Players Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ip}}:{{port}}/players/show/10",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"players",
+								"show",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Players Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Pepa",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Creus, 3",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "pepa@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "license",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "team_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ip}}:{{port}}/players/create",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"players",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Players Edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Pepet",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Cursa, 4",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "pepet@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "license",
+									"value": "22222222",
+									"type": "text"
+								},
+								{
+									"key": "team_id",
+									"value": "4",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ip}}:{{port}}/players/edit/11",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"players",
+								"edit",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Players Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{ip}}:{{port}}/players/delete/2",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"players",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ip}}:{{port}}/login",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ip}}:{{port}}/login",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{ip}}:{{port}}/logout",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
