@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use App\Events\NewUserRegister;
 
 class RegisteredUserController extends Controller
 {
@@ -45,9 +46,9 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        $user->assignRole('client');
+        // $user->assignRole('client');
 
-        event(new Registered($user));
+        event(new NewUserRegister($user));
 
         Auth::login($user);
 

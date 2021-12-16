@@ -10,18 +10,18 @@
         <div class="row mb-2">
             <div class="col-3">
                 <h5>First team</h5>
-                <select class="text-center border-none" name="team_1_id" value="{{old('team_1_id', $encounter->team_1->name)}}">
+                <select class="text-center border-none" name="team_1_id">
                     @foreach ($teams as $team)
-                        <option value="{{$team->id}}" {{$team->id==$encounter->team_1->id?'selected':''}}>{{$team->name}}</option>
+                        <option value="{{$team->id}}" {{$team->id==old('team_1_id', $encounter->team_1->id) ? 'selected':''}}>{{$team->name}}</option>
                     @endforeach
                 </select>
                 <!-- <input class="text-center" name="team_1" value="{{old('team_1', $encounter->team_1_id)}}"> -->
             </div>
             <div class="col-3">
                 <h5>Second team</h5>
-                <select class="text-center border-none" name="team_2_id" value="{{old('team_2_id', $encounter->team_2->name)}}">
+                <select class="text-center border-none" name="team_2_id">
                     @foreach ($teams as $team)
-                        <option value="{{$team->id}}" {{$team->id==$encounter->team_2->id?'selected':''}}>{{$team->name}}</option>
+                        <option value="{{$team->id}}" {{$team->id==old('team_2_id', $encounter->team_2->id) ? 'selected':''}}>{{$team->name}}</option>
                     @endforeach
                 </select>
                 <!-- <input class="text-center" name="team_2" value="{{old('team_2', $encounter->team_2_id)}}"> -->
@@ -34,7 +34,7 @@
                 <h5>Where</h5>
                 <select class="text-center border-none" name="where">
                     @foreach ($teams as $team)
-                        <option value="{{$team->where}}" {{$team->stadium==$encounter->where?'selected':''}}>{{$encounter->where}}</option>
+                        <option {{$team->stadium==$encounter->where?'selected':''}}>{{$team->stadium}}</option>
                     @endforeach
                 </select>
             </div>

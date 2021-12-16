@@ -57,14 +57,14 @@ class EncounterController extends Controller
     }
 
     public function update(Request $request, Encounter $encounter){
-        dd($encounter);
+        // dd($encounter);
         $request -> validate([
-            'team_1_id' => ['required', Rule::unique('encounters')->ignore($encounter->id)], //
-            'team_2_id' => ['required', 'different:team_1_id', Rule::unique('encounters')->ignore($encounter->id)], 
+            'team_1_id' => ['required'/*, Rule::unique('encounters')->ignore($encounter->id)*/],
+            'team_2_id' => ['required', 'different:team_1_id'/*, Rule::unique('encounters')->ignore($encounter->id)*/], 
             'when' => 'required|date',
             'where' => 'nullable'
         ]);
-        dd($request);
+        // dd($request);
         $encounter -> team_1_id = $request -> team_1_id;
         $encounter -> team_2_id = $request -> team_2_id;
         $encounter -> when = $request -> when;

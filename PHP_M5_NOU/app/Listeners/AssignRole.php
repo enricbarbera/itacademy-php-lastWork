@@ -26,6 +26,6 @@ class AssignRole
      */
     public function handle(NewUserRegister $event)
     {
-        //
+        $event->user->assignRole('client');
     }
 }

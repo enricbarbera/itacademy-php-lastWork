@@ -32,7 +32,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-// Route::group(['middleware' => 'auth'/*, 'middleware' => 'print.date'*/], function(){
+Route::group(['middleware' => 'auth'/*, 'middleware' => 'print.date'*/], function(){
 
     // Route::resource('teams', TeamController::class);
 
@@ -88,7 +88,7 @@ require __DIR__.'/auth.php';
 
     Route::delete('/players/delete/{player}', [PlayerController::class, 'destroy'])->name('players.destroy');
 
-// });
+});
 
 Route::get('/mail', function(){
 
