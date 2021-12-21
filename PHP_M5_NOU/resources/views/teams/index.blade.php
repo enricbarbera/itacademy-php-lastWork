@@ -23,13 +23,13 @@
                 <div class="col-2 text-center"><p>{{$team->color}}</p></div>
                 <div class="col-3 text-center">
                     @can('teams.show')
-                    <a href="{{route('teams.show', $team)}}" class="border border-primary rounded px-2 no-underline hover:bg-black hover:text-white hover:border-white">SHOW</a>
+                    <a href="{{route('teams.show', $team)}}" class="border border-primary rounded-3 px-2 no-underline hover:bg-black hover:text-white hover:border-white">SHOW</a>
                     @endcan
                     @can('teams.edit')
-                    <a href="{{route('teams.edit', $team)}}" class="text-warning border border-warning px-2 no-underline hover:bg-black hover:text-white">EDIT</a>
+                    <a href="{{route('teams.edit', $team)}}" class="text-warning border border-warning rounded-3 px-2 no-underline hover:bg-black hover:text-white">EDIT</a>
                     @endcan
                     @can('teams.destroy')
-                    <a href="{{route('teams.delete', $team)}}" class="text-danger border border-danger px-2 no-underline hover:bg-black hover:text-white">DELETE</a>
+                    <a href="{{route('teams.delete', $team)}}" class="text-danger border border-danger rounded-3 px-2 no-underline hover:bg-black hover:text-white">DELETE</a>
                     @endcan
                 </div>
             </div>
